@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Filterable Dropdown</h2>
+    <p>Open the dropdown menu and type something in the input field to search for dropdown items:</p>
+    <p>Note that we have styled the input field to fit the dropdown items.</p>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">Bootstrap</a></li>
+            <li><a href="#">Angular</a></li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .dropdown-menu li {
+        margin: 10px;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".dropdown-menu li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+    });
+</script>
+
+</body>
+</html>
