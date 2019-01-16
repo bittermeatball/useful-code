@@ -1,9 +1,8 @@
--
--jQuery-
--
-Number counting up to given in HTML tags
-CSS class .count required in HTML tags
--
+
+// jQuery
+// Number counting up to given in HTML tags
+// CSS class .count required in HTML tags
+//
 $('.count').each(function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
