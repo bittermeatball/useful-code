@@ -1,0 +1,5 @@
+$(document).ready(function() {
+    setTimeout(function() {
+      $('#id').fadeIn(200);
+    }, 30000); // milliseconds
+});
