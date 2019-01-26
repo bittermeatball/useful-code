@@ -1,5 +1,7 @@
-$(document).ready(function() {
-    setTimeout(function() {
-      $('#id').fadeIn(200);
-    }, 30000); // milliseconds
+$( "#popup-form-trigger" ).click(function() {
+    $( "#popup-form" ).hide( "slow", function() {
+        setTimeout(function() {
+            $('#popup-form').fadeIn(200);
+        }, 15000); // milliseconds	
+    });
 });
