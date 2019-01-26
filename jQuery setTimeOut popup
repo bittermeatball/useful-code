@@ -5,3 +5,31 @@ $( "#popup-form-trigger" ).click(function() {
         }, 15000); // milliseconds	
     });
 });
+
+		var Customers = [
+			"Nguyễn Văn An",
+			"Trương Thị Bích Hằng",
+			"Nguyễn Hữu Thọ",
+			"Nguyễn Bình",
+			"Trần Gia Thụy",
+			"Lê Công Sơn",
+			"Nguyễn Văn Long",
+			"Trương Anh Vũ",
+			"Nguyễn Quang Tú",
+			"Nguyễn Thị Trâm",
+			"Nguyễn Thị Trinh",
+			"Lê Việt Long",
+			"Hồ Minh Hoàng"
+		];
+		$(document).ready(function() {
+			setInterval(function(){
+				var randomCustomer = Customers[Math.floor(Math.random()*Customers.length)];
+				setTimeout(function() {
+					  $('#customer').fadeIn(1000);
+					document.getElementById("customer-name").innerHTML = randomCustomer ;
+				}, 1000); // milliseconds
+				setTimeout(function() {
+					  $('#customer').fadeOut(1000);
+				}, 5000); // milliseconds			
+			},10000)
+		});
